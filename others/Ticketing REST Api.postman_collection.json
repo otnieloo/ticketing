@@ -1,0 +1,186 @@
+{
+	"info": {
+		"_postman_id": "068da501-8e6e-432e-90a3-91109d019cbb",
+		"name": "Ticketing REST Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All Ticket",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "Get One Ticket",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:83/ticketing/api/8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "83",
+					"path": [
+						"ticketing",
+						"api",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Ticket",
+			"protocolProfileBehavior": {
+				"followRedirects": false
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "subject",
+							"value": "Test subject",
+							"type": "text"
+						},
+						{
+							"key": "message",
+							"value": "Test message",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "priority",
+							"value": "2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:83/ticketing/api/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "83",
+					"path": [
+						"ticketing",
+						"api",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Ticket Reply",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "ticket_number",
+							"value": "8",
+							"type": "text"
+						},
+						{
+							"key": "message",
+							"value": "Test reply",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:83/ticketing/api/reply",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "83",
+					"path": [
+						"ticketing",
+						"api",
+						"reply"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Close Ticket",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "ticket_number",
+							"value": "8",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:83/ticketing/api/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "83",
+					"path": [
+						"ticketing",
+						"api",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Ticket",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "a5cc1c0b-4ce2-11ec-8",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:83/ticketing/api/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "83",
+					"path": [
+						"ticketing",
+						"api",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
